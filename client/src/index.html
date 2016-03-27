@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <base href="/">
+
+    <title>Angular2 and c3 example</title>
+
+    <script src="build/vendors/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="build/vendors/angular2/bundles/angular2.dev.js"></script>
+    <script src="build/vendors/angular2/bundles/http.dev.js"></script>
+    <script src="build/vendors/angular2/bundles/router.dev.js"></script>
+    <script src="build/vendors/systemjs/dist/system.src.js"></script>
+    <script src="build/vendors/rxjs/bundles/Rx.js"></script>
+    
+    <link href="build/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="build/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="build/img/favicon.png?"/>
+
+    <script>
+      System.config({
+        defaultJSExtensions: true,
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        },
+        paths: {
+          'angular2/*': 'build/vendors/angular2/*',
+          'rxjs/*': 'build/vendors/rxjs/*'
+          //,
+          //'ng2-charts/*': 'build/vendors/ng2-charts/*'
+        }
+      });
+      System.import('build/app/index')
+        .then(null, console.error.bind(console));
+    </script>
+  </head>
+  <body>
+    <app class="main">
+      Loading...
+    </app>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,95 @@
+/*
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  min-width: 430px;
+  margin: 0 auto 30px;
+  padding: 30px 10px 10px 10px;
+}
+
+.main, workspace {
+  width: 100%;
+  min-width: 430px;
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.section, .section-list, home {
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 0 10pt;
+}
+
+.grid {
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.grid > div {
+  flex: 1 0 auto;
+}
+
+footer {
+  background: #222;
+  width: 100%;
+  min-width: 430px;
+  color: #eee;
+  padding: 15px;
+}
+
+.image-cell {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+router-outlet {
+  display: none;
+}
+
+
+.center {
+  flex-direction: column;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+login, signup, home > div {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+
+.ag-body-viewport {
+  background: #404040;
+}
+
+.ag-dark .ag-header {
+  background: #222;
+}
+
+nav.grid {
+    margin: 20px 0;
+}
+*/

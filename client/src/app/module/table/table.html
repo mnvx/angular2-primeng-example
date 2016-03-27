@@ -1,0 +1,18 @@
+<h2>Table</h2>
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Course</th>
+        <th *ngFor="#column of data.columns">{{column}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="#course of data.courses">
+        <th>{{course.name}}</th>
+        <td *ngFor="#value of course.orders">{{value}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>Example with table</p>
