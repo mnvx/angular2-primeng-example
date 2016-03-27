@@ -1,6 +1,8 @@
+/**
+ * Page with settings
+ */
+
 import {Component, Injectable, Inject} from 'angular2/core';
-import {CORE_DIRECTIVES} from 'angular2/common';
-import {RouterLink} from 'angular2/router';
 import {RadioButton} from 'primeng/primeng';
 import {Config} from '../../config';
 
@@ -8,7 +10,7 @@ declare var module: any
 
 @Component({
   selector: 'settings',
-  directives: [RouterLink, CORE_DIRECTIVES, RadioButton],
+  directives: [RadioButton],
   moduleId: module.id,
   templateUrl: './settings.html'
 })
@@ -30,6 +32,9 @@ export class Settings {
     this.chart = config.chartService;
   }
 
+  /**
+   * Select data source
+   */
   public onSourceSelect(source: string) {
     this.source = source;
     for (let item of this.config.sources) {
@@ -41,6 +46,9 @@ export class Settings {
     }
   }
 
+  /**
+   * Select chart library
+   */
   public onChartSelect(chart: string) {
     this.chart = chart;
     this.config.chartService = chart;

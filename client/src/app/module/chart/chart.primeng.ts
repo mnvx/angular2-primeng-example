@@ -1,6 +1,8 @@
+/**
+ * Component for PrimeNG chart
+ */
+
 import {Component, Injectable, Input} from 'angular2/core';
-import {RouterLink} from 'angular2/router';
-import {CORE_DIRECTIVES} from 'angular2/common';
 import {BarChart} from 'primeng/primeng';
 import {CourseData} from '../parser/interface';
 
@@ -9,7 +11,7 @@ declare var module: any
 @Component({
   selector: 'chart',
   inputs: ['originalData'],
-  directives: [RouterLink, CORE_DIRECTIVES, BarChart],
+  directives: [BarChart],
   bindings: [CourseData],
   moduleId: module.id,
   templateUrl: './chart.primeng.html'
@@ -19,8 +21,14 @@ declare var module: any
 
 export class ChartPrimeng {
 
+  /**
+   * Data from out datasource
+   */
   @Input() public originalData: CourseData;
 
+  /**
+   * Data for chart
+   */
   public data: any =  {
     labels: [],
     datasets: []
@@ -46,6 +54,9 @@ export class ChartPrimeng {
   
   public courses = [];
 
+  /**
+   * Format data for chart when originalData changes
+   */
   ngOnChanges(...args: any[]) {
     this.data.labels = this.originalData.columns;
     this.data.datasets = [];
@@ -61,11 +72,17 @@ export class ChartPrimeng {
     }
   }
 
+  /**
+   * If we select some course, we must refresh data on chart
+   */
   public onSelect(course) {
     this.data.datasets = [];
     this.showCourse(course.number);
   }
 
+  /**
+   * If we want to see all courses on chart
+   */
   public onSelectAll() {
     this.data.datasets = [];
     for (let i = 0; i < this.originalData.courses.length; i++) {
@@ -73,6 +90,9 @@ export class ChartPrimeng {
     }
   }
   
+  /**
+   * Add one course into chart
+   */
   private showCourse(i)
   {
     this.data.datasets.push({

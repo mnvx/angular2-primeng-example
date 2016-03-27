@@ -1,3 +1,7 @@
+/**
+ * Parser of data from datasource
+ */
+
 import {ParserInterface, CourseData} from './interface';
 
 export class Parser implements ParserInterface {

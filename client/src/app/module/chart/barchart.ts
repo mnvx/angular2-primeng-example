@@ -1,3 +1,6 @@
+/**
+ * Bar Chart adapter
+ */
 import {Component, Input/*, ElementRef, DynamicComponentLoader, ComponentMetadata, ViewMetadata*/} from 'angular2/core';
 import {CORE_DIRECTIVES} from 'angular2/common';
 import {CourseData} from '../parser/interface';
@@ -14,11 +17,14 @@ import {ChartOther} from './chart.other';
     // Select chart library automatically
     localStorage.getItem('chartService') === 'primeng' ? ChartPrimeng : ChartOther
   ],
-  template: '<chart #child [originalData]="originalData"></chart>'
+  template: '<chart [originalData]="originalData"></chart>'
 })
+
 export class BarChart {
   @Input() public originalData: CourseData;
 
+//  @todo: try to change chart library on fly
+//  
 //  constructor(dcl: DynamicComponentLoader, elementRef: ElementRef) {
 //    let Chart = localStorage.getItem('chartService') === 'primeng' ? ChartPrimeng : ChartOther;
 //    dcl.loadIntoLocation(Chart, elementRef, 'child');

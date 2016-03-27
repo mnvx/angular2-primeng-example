@@ -1,6 +1,8 @@
+/**
+ * Component for other chart library
+ */
+
 import {Component, Injectable, Input} from 'angular2/core';
-import {RouterLink} from 'angular2/router';
-import {CORE_DIRECTIVES} from 'angular2/common';
 import {BarChart} from 'primeng/primeng';
 import {CourseData} from '../parser/interface';
 
@@ -9,7 +11,7 @@ declare var module: any
 @Component({
   selector: 'chart',
   inputs: ['originalData'],
-  directives: [RouterLink, CORE_DIRECTIVES, BarChart],
+  directives: [BarChart],
   bindings: [CourseData],
   moduleId: module.id,
   templateUrl: './chart.other.html'

@@ -1,3 +1,7 @@
+/**
+ * Configuration settings
+ */
+
 export class Config {
   chartService: string = 'primeng';
 
@@ -21,6 +25,7 @@ export class Config {
   ];
   
   constructor() {
+    // Load initial settings from localStorage
     this.dataSource = localStorage.getItem('dataSource') || 'data/data.json';
     this.chartService = localStorage.getItem('chartService') || 'primeng';
     localStorage.setItem('chartService', this.chartService);

@@ -1,6 +1,6 @@
 {
-  "name": "angular2-c3-example",
-  "description": "Angular2 and c3 example",
+  "name": "angular2-primeng-example",
+  "description": "Angular2 and PrimeNG example",
   "version": "1.0.0",
   "scripts": {
     "gulp": "./node_modules/.bin/gulp",
@@ -18,8 +18,6 @@
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "gulp-usemin": "^0.3.20",
-    "primeng": "^0.9.0",
-    "primeui": "^4.1.6",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "0.19.22",
