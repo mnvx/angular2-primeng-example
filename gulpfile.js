@@ -14,11 +14,13 @@ var paths = {
   scripts: 'client/src/js/**/*.*',
   vendors: [
     'node_modules/angular2/**/*.js',
-    'node_modules/bootstrap/**/*.*',
-//    'node_modules/chart.js/**/*.*',
-//    'node_modules/ng2-charts/**/*.*',
+    'node_modules/bootstrap/**/*.css',
     'node_modules/rxjs/**/*.js',
-    'node_modules/systemjs/**/*.js'
+    'node_modules/systemjs/**/*.js',
+    'node_modules/primeng/**/*.js',
+    'node_modules/primeui/**/*.js',
+    'node_modules/primeng/**/*.css',
+    'node_modules/primeui/**/*.css'
   ],
   ts: 'client/src/app/**/*.ts',
   styles: [

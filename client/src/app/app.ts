@@ -1,7 +1,5 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, Router, RouterOutlet} from 'angular2/router';
-//import {Table} from './module/table/table';
-//import {Chart} from './module/chart/chart';
 import {Workspace} from './module/workspace/workspace';
 
 declare var module: any
@@ -15,8 +13,6 @@ declare var module: any
 @RouteConfig([
   { path: '/', redirectTo: ['Workspace'] },
   { path: '/workspace/...', component: Workspace, as: 'Workspace' }
-//  { path: '/table', component: Table, as: 'Table' },
-//  { path: '/chart', component: Chart, as: 'Chart' }
 ])
 
 export class App {

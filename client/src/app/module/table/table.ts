@@ -12,8 +12,7 @@ declare var module: any
   directives: [RouterLink, CORE_DIRECTIVES],
   bindings: [Parser, CourseService],
   moduleId: module.id,
-  templateUrl: './table.html',
-  styleUrls: ['./table.css']
+  templateUrl: './table.html'
 })
 
 @Injectable()

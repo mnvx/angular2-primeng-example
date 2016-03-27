@@ -14,7 +14,7 @@ declare var module: any
   templateUrl: './workspace.html'
 })
 @RouteConfig([
-  { path: '/chart', component: Chart, as: 'Chart' },
+  { path: '/mychart', component: Chart, as: 'Chart' },
   { path: '/table', component: Table, as: 'Table', useAsDefault: true }
 ])
 export class Workspace {

@@ -12,8 +12,13 @@
     <script src="build/vendors/angular2/bundles/router.dev.js"></script>
     <script src="build/vendors/systemjs/dist/system.src.js"></script>
     <script src="build/vendors/rxjs/bundles/Rx.js"></script>
-    
+    <script src="build/vendors/primeui/primeui-ng-all.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
     <link href="build/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="build/vendors/primeui/primeui-ng-all.min.css" />
+
     <link href="build/css/style.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="build/img/favicon.png?"/>
 
@@ -28,9 +33,11 @@
         },
         paths: {
           'angular2/*': 'build/vendors/angular2/*',
-          'rxjs/*': 'build/vendors/rxjs/*'
-          //,
-          //'ng2-charts/*': 'build/vendors/ng2-charts/*'
+          'rxjs/*': 'build/vendors/rxjs/*',
+          'primeng/*': 'build/vendors/primeng/*'
+        },
+        map: {
+          "/primeng": "build/vendors/primeng"
         }
       });
       System.import('build/app/index')

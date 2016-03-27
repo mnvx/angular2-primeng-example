@@ -1,12 +1,7 @@
 <h2>Chart</h2>
-<base-chart class="chart"
-           [data]="barChartData"
-           [labels]="barChartLabels"
-           [options]="barChartOptions"
-           [series]="barChartSeries"
-           [legend]="barChartLegend"
-           [series]="barChartSeries"
-           [chartType]="barChartType"
-           (chartHover)="chartHovered($event)"
-           (chartClick)="chartClicked($event)"></base-chart>
-<p>chart</p>
+<ul class="list-inline">
+  <li *ngFor="#course of courses"><button class="btn" (click)="onSelect(course)" style="background: {{course.color}}">{{course.name}}</button></li>
+  <li><button class="btn" (click)="onSelectAll()">All</button></li>
+</ul>
+<p-barChart [value]="data" [legend]="lgnd" width="640" height="320"></p-barChart>
+<!-- <div #lgnd></div> -->
