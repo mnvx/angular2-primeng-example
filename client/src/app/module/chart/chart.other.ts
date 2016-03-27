@@ -12,12 +12,12 @@ declare var module: any
   directives: [RouterLink, CORE_DIRECTIVES, BarChart],
   bindings: [CourseData],
   moduleId: module.id,
-  templateUrl: './chart.primeng.html'
+  templateUrl: './chart.other.html'
 })
 
 @Injectable()
 
-export class ChartPrimeng {
+export class ChartOther {
 
   @Input() public originalData: CourseData;
 
@@ -28,19 +28,19 @@ export class ChartPrimeng {
   
   private colors = [
     {
-        fillcolor:"#69D2E7"
+        fillcolor:"#AAAAAA"
     },
     {
-        fillcolor: "#A7DBDB"
+        fillcolor: "#BBBBBB"
     },
     {
-        fillcolor: "#E0E4CC"
+        fillcolor: "#CCCCCC"
     },
     {
-        fillcolor: "#F38630"
+        fillcolor: "#DDDDDD"
     },
     {
-        fillcolor: "#FA6900"
+        fillcolor: "#EEEEEE"
     }
   ];
   

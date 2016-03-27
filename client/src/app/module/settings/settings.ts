@@ -18,6 +18,7 @@ declare var module: any
 export class Settings {
   
   public source: string;
+  public chart: string;
 
   constructor(@Inject(Config) private config: Config) {
     for (let source of config.sources) {
@@ -26,8 +27,9 @@ export class Settings {
         break;
       }
     }
+    this.chart = config.chartService;
   }
-  
+
   public onSourceSelect(source: string) {
     this.source = source;
     for (let item of this.config.sources) {
@@ -37,6 +39,12 @@ export class Settings {
         break;
       }
     }
+  }
+
+  public onChartSelect(chart: string) {
+    this.chart = chart;
+    this.config.chartService = chart;
+    localStorage.setItem('chartService', chart);
   }
   
 }

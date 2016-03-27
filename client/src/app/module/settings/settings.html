@@ -1,12 +1,13 @@
 <h2>Settings</h2>
-<p>Select data source</p>
 
+<p>Select data source</p>
 <div class="btn-group" role="group" aria-label="...">
-  <!--
-  <button type="button" class="btn btn-default" [ngClass]="{active: source === 'source1'}" (click)="onSourceSelect('source1')">Datasource 1</button>
-  <button type="button" class="btn btn-default" [ngClass]="{active: source === 'source2'}" (click)="onSourceSelect('source2')">Datasource 2</button>
-  <button type="button" class="btn btn-default" [ngClass]="{active: source === 'source3'}" (click)="onSourceSelect('source3')">Datasource 3</button>
-  -->
-  <button *ngFor="#item of config.sources" type="button" class="btn btn-default" [ngClass]="{active: source === item.name}" (click)="onSourceSelect(item.name)">{{item.label}}</button>
-  
+  <button *ngFor="#item of config.sources" type="button" class="btn btn-default" [ngClass]="{active: source === item.name}" (click)="onSourceSelect(item.name)">{{item.label}}</button>  
+</div>
+<br/><br/>
+
+<p>Select chart library (* need to reload page)</p>
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default" [ngClass]="{active: chart === 'primeng'}" (click)="onChartSelect('primeng')">PrimeNG</button>
+  <button type="button" class="btn btn-default" [ngClass]="{active: chart === 'other'}" (click)="onChartSelect('other')">Other</button>
 </div>

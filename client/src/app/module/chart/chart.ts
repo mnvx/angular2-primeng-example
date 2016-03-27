@@ -4,13 +4,13 @@ import {CORE_DIRECTIVES} from 'angular2/common';
 import {CourseService} from '../service/course.service';
 import {Parser} from '../parser/parser';
 import {CourseData} from '../parser/interface';
-import {ChartPrimeng} from './chart.primeng';
+import {BarChart} from './barchart';
 
 declare var module: any
 
 @Component({
   selector: 'chart',
-  directives: [RouterLink, CORE_DIRECTIVES, ChartPrimeng],
+  directives: [RouterLink, CORE_DIRECTIVES, BarChart],
   bindings: [Parser, CourseService],
   moduleId: module.id,
   templateUrl: './chart.html'

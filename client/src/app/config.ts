@@ -22,5 +22,7 @@ export class Config {
   
   constructor() {
     this.dataSource = localStorage.getItem('dataSource') || 'data/data.json';
+    this.chartService = localStorage.getItem('chartService') || 'primeng';
+    localStorage.setItem('chartService', this.chartService);
   }
 }
