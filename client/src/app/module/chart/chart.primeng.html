@@ -1,0 +1,7 @@
+<h3>PrimeNG chart</h3>
+<ul class="list-inline">
+  <li *ngFor="#course of courses"><button class="btn" (click)="onSelect(course)" style="background: {{course.color}}">{{course.name}}</button></li>
+  <li><button class="btn" (click)="onSelectAll()">All</button></li>
+</ul>
+<p-barChart [value]="data" [legend]="lgnd" width="640" height="320"></p-barChart>
+<!-- <div #lgnd></div> -->
