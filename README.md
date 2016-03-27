@@ -25,7 +25,7 @@ Instruction for Debian/Ubuntu.
 Clone this repository:
 
 ```
-git clone git@github.com:mnvx/angular2-c3-example.git
+git clone git@github.com:mnvx/angular2-primeng-example.git
 ```
 
 Run
