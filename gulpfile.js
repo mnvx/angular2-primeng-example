@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 var paths = {
   scripts: 'client/src/js/**/*.*',
   vendors: [
-    'node_modules/angular2/**/*.js',
+    'node_modules/@angular/**/*.js',
     'node_modules/bootstrap/**/*.css',
     'node_modules/rxjs/**/*.js',
     'node_modules/systemjs/**/*.js',

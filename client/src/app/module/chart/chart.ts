@@ -2,7 +2,7 @@
  * Page with chart
  */
  
-import {Component, Injectable, Inject} from 'angular2/core';
+import {Component, Injectable, Inject} from '@angular/core';
 import {CourseService} from '../service/course.service';
 import {Parser} from '../parser/parser';
 import {CourseData} from '../parser/interface';
@@ -12,8 +12,6 @@ declare var module: any
 
 @Component({
   selector: 'chart',
-  directives: [BarChart],
-  bindings: [Parser, CourseService],
   moduleId: module.id,
   templateUrl: './chart.html'
 })

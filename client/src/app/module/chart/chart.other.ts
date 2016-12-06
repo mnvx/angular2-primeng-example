@@ -2,8 +2,7 @@
  * Component for other chart library
  */
 
-import {Component, Injectable, Input} from 'angular2/core';
-import {BarChart} from 'primeng/primeng';
+import {Component, Injectable, Input} from '@angular/core';
 import {CourseData} from '../parser/interface';
 
 declare var module: any
@@ -11,8 +10,6 @@ declare var module: any
 @Component({
   selector: 'chart',
   inputs: ['originalData'],
-  directives: [BarChart],
-  bindings: [CourseData],
   moduleId: module.id,
   templateUrl: './chart.other.html'
 })

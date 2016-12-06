@@ -2,15 +2,13 @@
  * Page with settings
  */
 
-import {Component, Injectable, Inject} from 'angular2/core';
-import {RadioButton} from 'primeng/primeng';
+import {Component, Injectable, Inject} from '@angular/core';
 import {Config} from '../../config';
 
 declare var module: any
 
 @Component({
   selector: 'settings',
-  directives: [RadioButton],
   moduleId: module.id,
   templateUrl: './settings.html'
 })

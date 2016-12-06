@@ -1,22 +1,13 @@
 /**
  * Bar Chart adapter
  */
-import {Component, Input/*, ElementRef, DynamicComponentLoader, ComponentMetadata, ViewMetadata*/} from 'angular2/core';
-import {CORE_DIRECTIVES} from 'angular2/common';
+import {Component, Input} from '@angular/core';
 import {CourseData} from '../parser/interface';
-
-import {ChartPrimeng} from './chart.primeng';
-import {ChartOther} from './chart.other';
 
 
 @Component({
   selector: 'barchart',
   inputs: ['originalData'],
-  directives: [
-    CORE_DIRECTIVES, 
-    // Select chart library automatically
-    localStorage.getItem('chartService') === 'primeng' ? ChartPrimeng : ChartOther
-  ],
   template: '<chart [originalData]="originalData"></chart>'
 })
 
