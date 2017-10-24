@@ -5,7 +5,8 @@
   "scripts": {
     "gulp": "./node_modules/.bin/gulp",
     "postinstall": "./install.sh",
-    "start": "./node_modules/.bin/concurrently \"npm run tsc:w\" \"npm run gulp\" \"php -S localhost:8000 -t public/ public/index.php\" ",
+    "start": "./node_modules/.bin/concurrently \"npm run tsc:w\" \"npm run gulp\" \"npm run serve\" ",
+    "serve": " http-server ./public -p 8000",
     "tsc": "./node_modules/.bin/tsc",
     "tsc:w": "./node_modules/.bin/tsc -w",
     "typings": "./node_modules/.bin/typings"
@@ -18,6 +19,7 @@
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "gulp-usemin": "^0.3.20",
+    "http-server": "^0.10.0",
     "primeng": "^0.9.0",
     "primeui": "^4.1.6",
     "reflect-metadata": "0.1.2",

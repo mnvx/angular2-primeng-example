@@ -47,7 +47,7 @@ gulp.task('usemin', function () {
         js: [minifyJs(), 'concat'],
         css: [minifyCss({keepSpecialComments: 0}), 'concat']
       }))
-      .pipe(gulp.dest('public/build/'));
+      .pipe(gulp.dest('public/'));
 });
 
 /**

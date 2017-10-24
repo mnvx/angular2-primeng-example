@@ -45,4 +45,4 @@ Use PHP 5.4+. Run command from path where project was installed:
 php -S localhost:8000 -t public/ public/index.php
 ```
 
-Then open url http://localhoost:8000
+Then open url http://localhost:8000
